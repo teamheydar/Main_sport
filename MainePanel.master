@@ -1,0 +1,176 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainePanel.master.cs" Inherits="MainePanel" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="Title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#3a4ed5">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets2/css/style.css">
+    <link rel="stylesheet" href="assets2/css/mdi.css">
+    <link rel="stylesheet" href="assets2/css/fl-bigmug-line.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <div class="page-loader">
+                <div class="page-loader-body">
+                    <div class="page-loader__logo">
+                        <img src="/File/img/<%Response.Write(Cms.imgTitel); %>" alt="" width="143" height="36">
+                    </div>
+                    <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-blue">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="spinner-layer spinner-red">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="spinner-layer spinner-yellow">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="spinner-layer spinner-green">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Page-->
+            <div class="page">
+                <!-- Page Header-->
+                <header class="section page-header">
+                    <!-- RD Navbar-->
+                    <div class="rd-navbar-wrap rd-navbar-corporate">
+                        <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fullwidth" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-md-stick-up-offset="130px" data-lg-stick-up-offset="100px" data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true">
+                            <div class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+                            <div class="rd-navbar-top-panel rd-navbar-collapse">
+                                <div class="rd-navbar-top-panel-inner">
+                                    <ul class="list-inline">
+                                        <li class="box-inline"><span class="icon icon-md-smaller icon-gray-light mdi mdi-phone"></span>
+                                            <ul class="list-comma">
+                                                <li><a href="About.aspx"><span class="ltr-text"><% Response.Write(Cms.NumberPhone); %></span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="box-inline"><span class="icon icon-md-smaller icon-gray-light mdi mdi-map-marker"></span><a href="About.aspx"><% Response.Write(Cms.Address); %></a></li>
+                                    </ul>
+                                    <ul class="list-inline">
+                                        
+                                    </ul>
+                                </div>
+                                <div style="text-align: center" class="rd-navbar-top-panel-inner"><a class="button button-sm button-secondary" href="Usear/Register.aspx">ثبت نام کنید</a></div>
+                            </div>
+                            <div class="rd-navbar-inner">
+                                <!-- RD Navbar Panel-->
+                                <div class="rd-navbar-panel">
+                                    <!-- RD Navbar Toggle-->
+                                    <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                                    <!-- RD Navbar Brand-->
+                                    <div class="rd-navbar-brand">
+                                        <a class="brand-name" href="index.aspx">
+                                            <img class="logo-default" src="/File/img/<%Response.Write(Cms.imgTitel); %>" alt="" width="143" height="36"><img class="logo-inverse" src="images/logo-inverse-143x36.png" alt="" width="143" height="36"></a>
+                                    </div>
+                                </div>
+                                <div class="rd-navbar-aside-center">
+                                    <div class="rd-navbar-nav-wrap">
+                                        <!-- RD Navbar Nav-->
+                                        <ul class="rd-navbar-nav">
+                                            <li class="active"><a href="index.aspx">خانه</a>
+                                            </li>
+                                            <li><a href="About.aspx">درباره ما</a>
+                                            </li>
+                                            <li><a href="javascript:void(0)">پنل کاربری</a>
+                                                <!-- RD Navbar Dropdown-->
+                                                <ul class="rd-navbar-dropdown">
+                                                    <li><a href="Usear/Dashboard.aspx">کاربران</a>
+                                                    </li>
+                                                    <li><a href="Teacher/Dashboard.aspx">مربیان</a>
+                                                    </li>
+                                                    <li><a href="Admin/Dashboard.aspx">مدیران</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary" href="Usear/Register.aspx">ثبت نام کنید</a></div>
+                            </div>
+                        </nav>
+                    </div>
+                </header>
+
+                <asp:ContentPlaceHolder ID="Main" runat="server"></asp:ContentPlaceHolder>
+
+                <!-- Page Footer-->
+                <!-- Footer Minimal -->
+                <footer class="section page-footer page-footer-minimal text-center bg-gray-darker">
+                    <div class="shell shell-wide">
+                        <div class="range range-xs-center range-sm-middle range-30">
+                            <div class="cell-sm-10 cell-md-7 cell-lg-4 text-lg-right">
+                                <a href="index.aspx">
+                                    <img class="default-logo" src="images/logo-default-143x36.png" alt="" width="143" height="36"><img class="inverse-logo" src="/File/img/<%Response.Write(Cms.imgTitel); %>" alt="" width="143" height="36"></a>
+                            </div>
+                            <div class="cell-sm-10 cell-md-7 cell-lg-4">
+                                <p class="right"><% Response.Write(Cms.FoterMain); %></p>
+                            </div>
+                            <div class="cell-sm-10 cell-md-7 cell-lg-4 text-lg-left">
+                                <ul class="group-xs group-middle">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+            <!-- Global Mailform Output-->
+            <div class="snackbars" id="form-output-global"></div>
+            <!-- Javascript-->
+            <script src="assets2/js/core.min.js"></script>
+            <script src="assets2/js/script.js"></script>
+
+        </div>
+    </form>
+</body>
+</html>
