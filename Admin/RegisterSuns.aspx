@@ -249,16 +249,15 @@
                                 <td data-th="کد سانس"><%Response.Write(item.Code); %></td>
                                 <td data-th="نام سانس"><%Response.Write(item.FullName); %></td>
                                 <td data-th="رشته ورزشی"><%Response.Write(item.SportFild); %></td>
-                                <td  data-th="مربی"><%Response.Write(item.Techare); %></td>
+                                <td data-th="مربی"><%Response.Write(item.Techare); %></td>
                                 <td data-th="جنسیت"><%Response.Write(item.Gender.ToString() == "0" ? "مرد" : "زن"); %></td>
                                 <td data-th="تاریخ شروع"><%Response.Write(item.D_Start); %></td>
                                 <td data-th="تاریخ پایان"><%Response.Write(item.D_End); %></td>
                                 <td data-th="سالن برگزاری"><%Response.Write(item.Gym); %></td>
                                 <td data-th="هزینه"><%Response.Write(string.Format("{0:n0}", item.Mony)); %></td>
                                 <td data-th="روز برگزاری"><%Response.Write(item.Days); %></td>
-                                <td >
+                                <td>
                                     <a onclick='<%Response.Write("SEdit(" + item.ID + ")");%>' class="text-white btn btn-warning">ویرایش</a>
-                                    <%--                                    <a onclick='<%Response.Write("SDelete(" + item.ID + ")");%>' class="text-white btn btn-danger">حذف</a>--%>
                                     <% if (item.Deleted == 0)
                                         {%>
                                     <a onclick='<%Response.Write("NotActive(" + item.ID + ")");%>' class="btn btn-danger text-white">غیر فعال</a>
@@ -267,6 +266,7 @@
                                         {%>
                                     <a onclick='<%Response.Write("Active(" + item.ID + ")");%>' class="btn btn-primary text-white ">فعال</a>
                                     <%}%>
+                                    <a onclick='<%Response.Write("SDelete(" + item.ID + ")");%>' class="text-white btn btn-danger">حذف</a>
 
                                 </td>
                             </tr>
@@ -310,7 +310,7 @@
                 <div class="p-2">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">بستن</button>
                     <form>
-<%--                        <asp:Button ID="Button2" CssClass="btn" Style="background-color: green; color: white" runat="server" Text="ثبت" />--%>
+                        <%--                        <asp:Button ID="Button2" CssClass="btn" Style="background-color: green; color: white" runat="server" Text="ثبت" />--%>
                         <asp:LinkButton ID="Mo_Enter" CssClass="btn" Style="background-color: green; color: white" runat="server" OnClick="Mo_Enter_OnClick">ثبت</asp:LinkButton>
                     </form>
                 </div>

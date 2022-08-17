@@ -220,33 +220,32 @@ public partial class Admin_RegisterSuns : System.Web.UI.Page
 
 
     }
-    //[WebMethod]
-    //public static int btn_Delete(int id)
-    //{
-    //    DataClassesDataContext db = new DataClassesDataContext();
-    //    try
-    //    {
-    //        var q = (from k in db.tbl_Sans where k.ID == id && k.Deleted == 0 select k).Single();
-    //        var SansBuy = db.tbl_SansBuys.Where(s =>
-    //                   s.UserID == id &&
-    //                   s.Deleted == 0);
+    [WebMethod]
+    public static int btn_Delete(int id)
+    {
+        DataClassesDataContext db = new DataClassesDataContext();
+        try
+        {
+            var q = (from k in db.tbl_Sans where k.ID == id && k.Deleted == 0 select k).Single();
+            var SansBuy = db.tbl_SansBuys.Where(s =>
+                       s.SansID == id &&
+                       s.Deleted == 0).ToList();
 
-    //        for (int i = 0; i < SansBuy.Count(); i++)
-    //        {
+            for (int i = 0; i < SansBuy.Count(); i++)
+            {
+                SansBuy[i].Deleted = 1;
+            }
+            db.tbl_Sans.DeleteOnSubmit(q);
+            db.SubmitChanges();
+            return 1;
 
-    //        }
-
-    //        q.Deleted = 1;
-    //        db.SubmitChanges();
-    //        return 1;
-
-    //    }
-    //    catch (Exception e)
-    //    {
-    //        string d = e.Message;
-    //        return 0;
-    //    }
-    //}
+        }
+        catch (Exception e)
+        {
+            string d = e.Message;
+            return 0;
+        }
+    }
 
     protected void btn_Cansel_OnClick(object sender, EventArgs e)
     {

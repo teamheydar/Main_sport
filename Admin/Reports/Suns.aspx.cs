@@ -18,7 +18,7 @@ public partial class Admin_Reports_User : System.Web.UI.Page
 
         if (!IsPostBack)
         {
-            h2_cont_o.InnerText = Data.tbl_Teachers.Count(c => 
+            h2_cont_o.InnerText = Data.tbl_Teachers.Count(c =>
                 c.Gym_ID == Tools.GetADminId() && c.Deleted == 0).ToString();
             SansData = Data.tbl_Sans
                 .Where(u =>
@@ -49,7 +49,7 @@ public partial class Admin_Reports_User : System.Web.UI.Page
 
     protected void btnOK_OnClick(object sender, EventArgs e)
     {
-        if (Teacher.Value == "-1")
+        if ((txtCod.Value == "" || txtCod.Value == null) && Teacher.Value == "-1")
         {
             SansData = Data.tbl_Sans
                 .Where(u =>
@@ -57,7 +57,7 @@ public partial class Admin_Reports_User : System.Web.UI.Page
                     u.GymID == Tools.GetADminId())
                 .Select(u => u);
         }
-        else
+        else if (Teacher.Value == "-1")
         {
             SansData = Data.tbl_Sans
                 .Where(u =>
@@ -66,5 +66,25 @@ public partial class Admin_Reports_User : System.Web.UI.Page
                     u.TechareID == (int.Parse(Teacher.Value)))
                 .Select(u => u);
         }
+        else if ((txtCod.Value == "" || txtCod.Value == null))
+        {
+            SansData = Data.tbl_Sans
+                .Where(u =>
+                    u.Deleted == 0 &&
+                    u.GymID == Tools.GetADminId() &&
+                    u.Code == txtCod.Value)
+                .Select(u => u);
+        }
+        else
+        {
+            SansData = Data.tbl_Sans
+                .Where(u =>
+                    u.Deleted == 0 &&
+                    u.GymID == Tools.GetADminId() &&
+                    u.Code == txtCod.Value &&
+                    u.TechareID == (int.Parse(Teacher.Value)))
+                .Select(u => u);
+        }
+        
     }
 }

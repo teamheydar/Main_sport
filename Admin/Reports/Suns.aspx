@@ -43,11 +43,11 @@
                         <form>
                             <div class="row">
                                 <div class="mb-3 col-md-6">
-                                    <label class="form-label" for="basic-default-company">کد:</label>
+                                    <label class="form-label" for="txtCod">کد:</label>
                                     <input type="text" class="form-control" runat="server" id="txtCod" />
                                 </div>
                                 <div class="mb-3 col-md-6">
-                                    <label class="form-label" for="basic-default-fullname">مربی سانس:</label>
+                                    <label class="form-label" for="Teacher">مربی سانس:</label>
                                     <select id="Teacher" runat="server" class="select2 form-select select2-hidden-accessible" data-select2-id="country" tabindex="-1" aria-hidden="true">
                                     </select>
                                 </div>
