@@ -99,7 +99,7 @@
                                         
                                     </ul>
                                 </div>
-                                <div style="text-align: center" class="rd-navbar-top-panel-inner"><a class="button button-sm button-secondary" href="Usear/Register.aspx">ثبت نام کنید</a></div>
+                                <div style="text-align: center" class="rd-navbar-top-panel-inner"><a class="button button-sm button-secondary" href="User/Register.aspx">ثبت نام کنید</a></div>
                             </div>
                             <div class="rd-navbar-inner">
                                 <!-- RD Navbar Panel-->
@@ -135,7 +135,7 @@
                                     </div>
 
                                 </div>
-                                <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary" href="Usear/Register.aspx">ثبت نام کنید</a></div>
+                                <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary" href="User/Register.aspx">ثبت نام کنید</a></div>
                             </div>
                         </nav>
                     </div>

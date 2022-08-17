@@ -10,7 +10,6 @@ public partial class Admin_View_ViewUser : System.Web.UI.Page
 {
     public DataClassesDataContext Data = new DataClassesDataContext();
     public tbl_User DataUser = new tbl_User();
-    public IEnumerable<tbl_ReportsBuyUser> RBU;
     private int _id;
     
     protected void Page_Load(object sender, EventArgs e)
@@ -47,10 +46,18 @@ public partial class Admin_View_ViewUser : System.Web.UI.Page
                 u.ID == _id &&
                 u.GymID == Tools.GetADminId());
 
-            RBU = Data.tbl_ReportsBuyUsers.Where(r =>
-                r.Deleted == 0 &&
-                r.UserID == DataUser.ID &&
-                r.Deleted == 0);
+           var RBU = from k in Data.tbl_Orders
+                orderby k.ID descending
+                join p in Data.tbl_OnlinePayments on k.ID equals p.OrderID
+                where k.MemberID == int.Parse(Request.Cookies["MemberLogin"].Value)
+                select new
+                {
+                    p.PaymentAmount,
+                    p.PaymentIsSuccessful,
+                    p.PaymentDate,
+                    p.PaymentTransactionID,
+                    p.PaymentResponseMessage
+                };
 
             //Show
             spanDateNow.InnerText = Tools.DateTime();

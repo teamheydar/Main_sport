@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="Panel.master" EnableEventValidation="false" AutoEventWireup="true" CodeFile="EditProfile.aspx.cs" Inherits="Usear_Edit" %>
+﻿<%@ Page Language="C#" MasterPageFile="Panel.master" EnableEventValidation="false" AutoEventWireup="true" CodeFile="EditProfile.aspx.cs" Inherits="User_Edit" %>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="Title" runat="Server">ویرایش حساب</asp:Content>
 

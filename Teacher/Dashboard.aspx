@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="Panel.master" AutoEventWireup="true" CodeFile="Dashboard.aspx.cs" Inherits="Usear_Profile" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="Panel.master" AutoEventWireup="true" CodeFile="Dashboard.aspx.cs" Inherits="User_Profile" %>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="Title" runat="Server">
     داشبورد

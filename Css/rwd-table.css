@@ -121,7 +121,7 @@
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
     .rwd-table tr:hover:not(:first-child) {
         
     }

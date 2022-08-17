@@ -72,6 +72,7 @@
                                 <td data-th="روز هفته"><% Response.Write(item.DateWek); %></td>
                                 <td data-th="ساعت ورود"><% Response.Write(item.TimeLogin); %></td>
                                 <td data-th="ساعت خروج"><% Response.Write(item.TimeOut); %></td>
+                                <td hidden="hidden"></td>
                             </tr>
 
                             <% }

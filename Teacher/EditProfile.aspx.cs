@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Usear_Edit : System.Web.UI.Page
+public partial class User_Edit : System.Web.UI.Page
 {
     private DataClassesDataContext Data = new DataClassesDataContext();
     private tbl_Teacher UserItem;

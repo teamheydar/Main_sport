@@ -7,7 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
 
-public partial class Usear_Edit : System.Web.UI.Page
+public partial class User_Edit : System.Web.UI.Page
 {
     private DataClassesDataContext Data = new DataClassesDataContext();
     private tbl_Admin UserItem;

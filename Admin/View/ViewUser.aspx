@@ -141,6 +141,7 @@
                                             <td data-th="شروع"><% Response.Write(_SansBoy.D_Start); %></td>
                                             <td data-th="پایان"><% Response.Write(_SansBoy.D_End); %></td>
                                             <td data-th="سالن برگزاری"><% Response.Write(_SansBoy.Gym); %></td>
+                                            <td hidden="hidden"></td>
                                         </tr>
 
                                         <% }%>
@@ -157,8 +158,23 @@
                             <div class="card-header d-flex justify-content-between align-items-center">
                                 <h5 class="mb-0">لیست گزارشات پرداخت</h5>
                             </div>
-                            <%
-                                if (RBU.Count() == 0)
+                            <% var RBU = (from k in Data.tbl_Orders
+                                           orderby k.ID descending
+                                           join p in Data.tbl_OnlinePayments on k.ID equals p.OrderID
+                                           where k.MemberID == DataUser.ID
+                                           select new
+                                           {
+                                               p.PaymentAmount,
+                                               p.PaymentIsSuccessful,
+                                               p.PaymentDate,
+                                               p.PaymentTransactionID,
+                                               p.PaymentResponseMessage,
+
+                                               k.Date_Insert,
+                                               k.IsFinal
+                                           });
+
+                                if (!RBU.Any())
                                 {%>
                             <p style="text-align: center">رکوردی یافت نشد</p>
                             <% }
@@ -175,13 +191,16 @@
                                     </tr>
                                 </thead>
                                 <tbody class="table-border-bottom-0 ">
-                                    <% foreach (var Item in RBU)
+                                    <% 
+
+                                        foreach (var Item in RBU)
                                         { %>
                                     <tr>
-                                        <td data-th="تاریخ"><% Response.Write(Item.Date); %></td>
-                                        <td data-th="نتیجه"><% Response.Write(Item.Result == 1 ? "پرداخت موفق" : "پرداخت ناموفق"); %></td>
-                                        <td data-th="شناسه پرداخت"><% Response.Write(Item.N_Buy); %></td>
-                                        <td data-th="مبلغ"><% Response.Write(string.Format("{0:n0}", int.Parse(Item.Money))); %></td>
+                                        <td data-th="تاریخ"><% Response.Write(Item.Date_Insert); %></td>
+                                        <td data-th="نتیجه"><% Response.Write(Item.IsFinal == true ? "پرداخت موفق" : "پرداخت ناموفق"); %></td>
+                                        <td data-th="شناسه پرداخت"><% Response.Write(Item.PaymentTransactionID); %></td>
+                                        <td data-th="مبلغ"><% Response.Write(string.Format("{0:n0}", int.Parse(Item.PaymentAmount.ToString()))); %></td>
+                                        <td hidden="hidden"></td>
                                     </tr>
 
                                     <% }%>

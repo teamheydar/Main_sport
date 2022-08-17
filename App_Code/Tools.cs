@@ -97,7 +97,7 @@ public class Tools
 
         if (app.Request.Cookies["username"] == null || app.Request.Cookies["password"] == null)
         {
-            app.Response.Redirect("~/Usear/Login.aspx");
+            app.Response.Redirect("~/User/Login.aspx");
         }
         else
         {
@@ -109,7 +109,7 @@ public class Tools
 
             if (!AnyUser)
             {
-                app.Response.Redirect("~/Usear/Login.aspx");
+                app.Response.Redirect("~/User/Login.aspx");
             }
         }
         var IDAdminUser = Data.tbl_Users.Single(u =>
@@ -203,7 +203,7 @@ public class Tools
 
         if (Full == false)
         {
-            app.Response.Redirect("~/Usear/EditProfile.aspx");
+            app.Response.Redirect("~/User/EditProfile.aspx");
         }
     }
 

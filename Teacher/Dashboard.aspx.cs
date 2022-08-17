@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Usear_Profile : System.Web.UI.Page
+public partial class User_Profile : System.Web.UI.Page
 {
     public DataClassesDataContext Data = new DataClassesDataContext();
     public tbl_User UserData = new tbl_User();
@@ -14,7 +14,7 @@ public partial class Usear_Profile : System.Web.UI.Page
     public IEnumerable<tbl_San> TeacherSans = new List<tbl_San>();
     protected void Page_Load(object sender, EventArgs e)
     {
-        #region Get_Usear_Data
+        #region Get_User_Data
 
         Tools.CookiTeacher();
 

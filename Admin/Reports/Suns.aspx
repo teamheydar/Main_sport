@@ -102,6 +102,7 @@
                                         <td data-th="هزینه"><%Response.Write(string.Format("{0:n0}", item.Mony)); %></td>
                                         <td data-th="روز برگزاری"><%Response.Write(item.Days); %></td>
                                         <td data-th="مربی"><%Response.Write(item.Techare); %></td>
+                                        <td hidden="hidden"></td>
                                     </tr>
                                     <%} %>
                                 </tbody>

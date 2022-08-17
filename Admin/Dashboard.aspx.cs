@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Usear_Profile : System.Web.UI.Page
+public partial class User_Profile : System.Web.UI.Page
 {
     DataClassesDataContext Data = new DataClassesDataContext();
 
@@ -69,7 +69,7 @@ public partial class Usear_Profile : System.Web.UI.Page
         }
 
 
-        #region Get_Usear_Data
+        #region Get_User_Data
 
         var Full = Data.tbl_Admins.Any(k =>
             k.UserName.ToLower() == Request.Cookies["ausername"].Value
