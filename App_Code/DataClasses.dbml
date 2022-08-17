@@ -97,6 +97,27 @@
       <Column Name="Deleted" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
+  <Table Name="dbo.tbl_OnlinePayment" Member="tbl_OnlinePayments">
+    <Type Name="tbl_OnlinePayment">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PaymentAmount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PaymentDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PaymentIsSuccessful" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PaymentResponseCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PaymentResponseMessage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PaymentTransactionID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Orders" Member="tbl_Orders">
+    <Type Name="tbl_Order">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SansID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date_Insert" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsFinal" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.tbl_ReportsBuyUser" Member="tbl_ReportsBuyUsers">
     <Type Name="tbl_ReportsBuyUser">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

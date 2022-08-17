@@ -118,6 +118,7 @@
                                         <td data-th="شروع"><% Response.Write(Item.D_Start); %></td>
                                         <td data-th="پایان"><% Response.Write(Item.D_End); %></td>
                                         <td data-th="سالن برگزاری"><% Response.Write(Item.Gym); %></td>
+                                        <td hidden="hidden"></td>
                                     </tr>
                                     <% } %>
                                 </tbody>

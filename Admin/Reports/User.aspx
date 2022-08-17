@@ -128,7 +128,7 @@
                                                     <td data-th="کد ملی"><%Response.Write(item.Codey); %></td>
                                                     <td data-th="تاریخ ثبت نام"><%Response.Write(item.R_Date); %></td>
                                                     <td data-th="تلفن همراه"><%Response.Write(item.N_Phone); %></td>
-                                                    <td data-th="عملیات"><a class="btn btn-info" href="../View/ViewUser.aspx?id=<%Response.Write(item.ID); %>">نمایش و تایید</a></td>
+                                                    <td ><a class="btn btn-info" href="../View/ViewUser.aspx?id=<%Response.Write(item.ID); %>">نمایش و تایید</a></td>
                                                 </tr>
                                                 <%} %>
                                             </tbody>
@@ -174,7 +174,7 @@
                                                     <td data-th="کد ملی"><%Response.Write(item.Codey); %></td>
                                                     <td data-th="تاریخ ثبت نام"><%Response.Write(item.R_Date); %></td>
                                                     <td data-th="تلفن همراه"><%Response.Write(item.N_Phone); %></td>
-                                                    <td data-th="عملیات"><a class="btn btn-info" href="../View/ViewUser.aspx?id=<%Response.Write(item.ID); %>">نمایش</a></td>
+                                                    <td ><a class="btn btn-info" href="../View/ViewUser.aspx?id=<%Response.Write(item.ID); %>">نمایش</a></td>
                                                 </tr>
                                                 <%} %>
                                             </tbody>

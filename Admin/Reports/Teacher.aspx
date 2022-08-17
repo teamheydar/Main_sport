@@ -95,7 +95,7 @@
                                             <td data-th="جنسیت"><%Response.Write(item.Gender.ToString() == "0" ? "مرد" : "زن"); %></td>
                                             <td data-th="تاریخ ثبت نام"><%Response.Write(item.R_Date); %></td>
                                             <td data-th="شماره تلفن"><%Response.Write(item.N_Phone); %></td>
-                                            <td data-th="عملیات"><a class="btn btn-info" href="../View/ViewTeacher.aspx?id=<%Response.Write(item.ID); %>">نمایش</a></td>
+                                            <td ><a class="btn btn-info" href="../View/ViewTeacher.aspx?id=<%Response.Write(item.ID); %>">نمایش</a></td>
                                         </tr>
                                         <%} %>
                                     </tbody>

@@ -166,7 +166,7 @@
                                 <td data-th="روز هفته"><% Response.Write(item.DateWek); %></td>
                                 <td data-th="ساعت ورود"><% Response.Write(item.TimeLogin); %></td>
                                 <td data-th="ساعت خروج"><% Response.Write(item.TimeOut); %></td>
-                                <td data-th="عملیات">
+                                <td >
                                     <a onclick='<%Response.Write("SEdit(" + item.ID + ")");%>' class="text-white btn btn-warning">ویرایش</a>
                                     <a onclick='<%Response.Write("SDelete(" + item.ID + ")");%>' class="text-white btn btn-danger">حذف</a>
                                 </td>

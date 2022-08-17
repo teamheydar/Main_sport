@@ -256,7 +256,7 @@
                                 <td data-th="سالن برگزاری"><%Response.Write(item.Gym); %></td>
                                 <td data-th="هزینه"><%Response.Write(string.Format("{0:n0}", item.Mony)); %></td>
                                 <td data-th="روز برگزاری"><%Response.Write(item.Days); %></td>
-                                <td data-th="عملیات">
+                                <td >
                                     <a onclick='<%Response.Write("SEdit(" + item.ID + ")");%>' class="text-white btn btn-warning">ویرایش</a>
                                     <%--                                    <a onclick='<%Response.Write("SDelete(" + item.ID + ")");%>' class="text-white btn btn-danger">حذف</a>--%>
                                     <% if (item.Deleted == 0)

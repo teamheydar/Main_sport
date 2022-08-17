@@ -139,7 +139,7 @@
                                     <td data-th="کد ملی"><%Response.Write(item.Codey); %></td>
                                     <td data-th="تاریخ ثبت نام"><%Response.Write(item.R_Date); %></td>
                                     <td data-th="تلفن همراه"><%Response.Write(item.N_Phone); %></td>
-                                    <td data-th="عملیات">
+                                    <td >
                                         <a class="btn btn-info" href="View/ViewUser.aspx?id=<%Response.Write(item.ID); %>">نمایش</a> 
                                         <a onclick='<%Response.Write("SEdit(" + item.ID + ")");%>' class="text-white btn btn-warning">ویرایش</a>
                                         <a onclick='<%Response.Write("SDelete(" + item.ID + ")");%>' class="text-white btn btn-danger">حذف</a>
